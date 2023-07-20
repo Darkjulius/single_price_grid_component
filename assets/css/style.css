@@ -1,0 +1,96 @@
+:root {
+  --primary-cyan: #2ab2af;
+  --primary-bright-yellow: #c0df34;
+  --neutral-light-gray: hsl(203, 44%, 93%);
+  --neutral-grayish-blue: #98a6bd;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+main {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
+  height: auto;
+  width: 635px;
+}
+
+.container-one {
+  padding: 40px;
+}
+
+/* CONTAINER ONE */
+.container-one h1 {
+  color: var(--primary-cyan);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.container-one h2 {
+  color: var(--primary-bright-yellow);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.225px;
+  line-height: normal;
+  margin-bottom: 11px;
+}
+
+.container-one p {
+  color: var(--neutral-grayish-blue);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+/* CONTAINER TWO */
+
+.container-two {
+  display: flex;
+}
+
+.section-one {
+  background: var(--primary-cyan);
+  padding: 40px;
+  width: 278px;
+}
+
+.section-one h2 {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.225px;
+  line-height: normal;
+}
+
+.dollar {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: normal;
+}
+
+.section-one p:nth-child(2){
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    line-height: 26px;
+    opacity: .5;
+}
+
+.section-two {
+  padding: 40px;
+  width: 278px;
+}
