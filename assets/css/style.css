@@ -1,31 +1,44 @@
 :root {
-  --primary-cyan: #2ab2af;
+  --primary-cyan: hsl(179, 62%, 43%);
   --primary-bright-yellow: #c0df34;
   --neutral-light-gray: hsl(203, 44%, 93%);
   --neutral-grayish-blue: #98a6bd;
 }
 
-body {
-  font-family: "Karla", sans-serif;
-  font-size: 16px;
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-main {
-  background: #fff;
+body {
+  align-items: center;
+  background-color: var(--neutral-light-gray);
+  display: flex;
+  flex-direction: column;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
-  height: auto;
-  width: 635px;
+  width: 40%;
 }
 
-.container-one {
+/* FIRST BLOCK ARTICLE */
+.container > article {
   padding: 40px;
 }
 
-/* CONTAINER ONE */
-.container-one h1 {
+.container > article h1 {
   color: var(--primary-cyan);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.3px;
@@ -33,9 +46,9 @@ main {
   margin-bottom: 24px;
 }
 
-.container-one h2 {
+.green {
   color: var(--primary-bright-yellow);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.225px;
@@ -43,54 +56,135 @@ main {
   margin-bottom: 11px;
 }
 
-.container-one p {
+.container > article p:nth-child(3) {
   color: var(--neutral-grayish-blue);
   font-style: normal;
   font-weight: 400;
-  line-height: 26px;
   letter-spacing: -0.2px;
+  line-height: 26px;
 }
 
-/* CONTAINER TWO */
-
-.container-two {
+/* BLOCK SECTION */
+section {
+  background-color: var(--primary-cyan);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.section-one {
-  background: var(--primary-cyan);
+section > article:first-child {
   padding: 40px;
-  width: 278px;
+  width: 50%;
 }
 
-.section-one h2 {
+section > article:first-child h2 {
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.225px;
   line-height: normal;
+  margin-bottom: 18px;
 }
 
 .dollar {
+  display: flex;
+}
+
+.dollar > p:first-child {
+  align-self: center;
   color: #fff;
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.4px;
   line-height: normal;
+  margin-right: 11px;
 }
 
-.section-one p:nth-child(2){
-    color: #fff;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: -.2px;
-    line-height: 26px;
-    opacity: .5;
+.dollar > p:last-child {
+  align-self: center;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 26px;
+  opacity: 0.5;
 }
 
-.section-two {
-  padding: 40px;
-  width: 278px;
+section > article:first-child p {
+  color: #fff;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 26px;
+}
+
+input {
+  background-color: var(--primary-bright-yellow);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  line-height: normal;
+  margin-top: 26px;
+  padding: 8% 0;
+  width: 100%;
+}
+
+section > article:last-child {
+  background-color: hsl(179, 62%, 49%);
+  border-bottom-right-radius: 8px;
+  padding-left: 40px;
+  width: 50%;
+}
+
+section > article:last-child h2 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.225px;
+  line-height: normal;
+  padding: 40px 0 18px 0;
+}
+
+section > article:last-child ul {
+  list-style-type: none;
+}
+
+ul li {
+  color: #fff;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.175px;
+  line-height: 20px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+  .container > article {
+    padding: 24px;
+  }
+  section {
+    flex-direction: column;
+  }
+
+  section > article:first-child {
+    padding: 24px;
+    width: 100%;
+  }
+
+  section > article:last-child {
+    padding-left: 0;
+    padding: 24px;
+    width: 100%;
+  }
 }
