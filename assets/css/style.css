@@ -1,8 +1,8 @@
 :root {
   --primary-cyan: hsl(179, 62%, 43%);
-  --primary-bright-yellow: #c0df34;
-  --neutral-light-gray: hsl(203, 44%, 93%);
-  --neutral-grayish-blue: #98a6bd;
+  --primary-bright-yellow: hsl(71, 73%, 54%);
+  --neutral-light-gray: hsl(204, 43%, 93%);
+  --neutral-grayish-blue: hsl(217, 22%, 67%);
 }
 
 *,
@@ -20,63 +20,62 @@ body {
   flex-direction: column;
   font-family: "Karla", sans-serif;
   font-size: 1rem;
-  height: 100vh;
   justify-content: center;
+  min-height: 100vh;
+  padding: 72px 32px 62px 32px;
 }
 
 .container {
-  background-color: #fff;
+  background-color: var(--neutral-light-gray);
   border-radius: 8px;
   box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 375px;
 }
 
-/* FIRST BLOCK ARTICLE */
 .container > article {
-  padding: 40px;
+  padding: 28px 24px 32px 24px;
+  width: 100%;
 }
 
 .container > article h1 {
   color: var(--primary-cyan);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.25px;
   line-height: normal;
   margin-bottom: 24px;
 }
 
 .green {
   color: var(--primary-bright-yellow);
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.225px;
-  line-height: normal;
-  margin-bottom: 11px;
+  letter-spacing: -0.187px;
+  line-height: 20px;
+  margin-bottom: 16px;
 }
 
-.container > article p:nth-child(3) {
+.container > article p:last-child {
   color: var(--neutral-grayish-blue);
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.175px;
   line-height: 26px;
 }
 
-/* BLOCK SECTION */
-section {
-  background-color: var(--primary-cyan);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  display: flex;
-  justify-content: space-between;
+.container > section {
   width: 100%;
 }
 
 section > article:first-child {
-  padding: 40px;
-  width: 50%;
+  background-color: var(--primary-cyan);
+  padding: 24px;
 }
 
 section > article:first-child h2 {
@@ -86,41 +85,36 @@ section > article:first-child h2 {
   font-weight: 700;
   letter-spacing: -0.225px;
   line-height: normal;
-  margin-bottom: 18px;
 }
 
 .dollar {
+  align-items: center;
   display: flex;
 }
 
-.dollar > p:first-child {
-  align-self: center;
+.dollar p:first-child {
   color: #fff;
-  font-size: 2rem;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.4px;
   line-height: normal;
   margin-right: 11px;
 }
 
-.dollar > p:last-child {
-  align-self: center;
+.dollar p:last-child {
   color: #fff;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -0.2px;
   line-height: 26px;
   opacity: 0.5;
 }
 
-section > article:first-child p {
+section > article:first-child > p {
   color: #fff;
-  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -0.2px;
   line-height: 26px;
+  margin-bottom: 26px;
 }
 
 input {
@@ -129,30 +123,26 @@ input {
   border-radius: 5px;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   color: #fff;
+  flex-shrink: 0;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.2px;
-  line-height: normal;
-  margin-top: 26px;
-  padding: 8% 0;
+  padding: 15px 0;
   width: 100%;
 }
 
 section > article:last-child {
   background-color: hsl(179, 62%, 49%);
-  border-bottom-right-radius: 8px;
-  padding-left: 40px;
-  width: 50%;
+  padding: 24px;
 }
 
 section > article:last-child h2 {
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.225px;
   line-height: normal;
-  padding: 40px 0 18px 0;
+  margin-bottom: 18px;
 }
 
 section > article:last-child ul {
@@ -164,27 +154,54 @@ ul li {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -0.175px;
   line-height: 20px;
+  opacity: 0.75;
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 635px;
+  }
+
   .container > article {
-    padding: 24px;
-  }
-  section {
-    flex-direction: column;
+    padding: 40px;
   }
 
-  section > article:first-child {
-    padding: 24px;
-    width: 100%;
+  .container > section {
+    display: flex;
+  }
+  
+  .container > section > article:first-child {
+    border-bottom-left-radius: 8px;
+    padding: 40px;
   }
 
-  section > article:last-child {
-    padding-left: 0;
-    padding: 24px;
-    width: 100%;
+  .container > section > article:last-child {
+    border-bottom-right-radius: 8px;
+    padding: 40px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container > article h1 {
+    font-size: 1.5rem;
+  }
+
+  .green {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+  }
+
+  .container > article p:last-child {
+    font-size: 1rem;
+  }
+
+  section > article:first-child h2 {
+    margin-bottom: 18px;
+  }
+
+  section > article:first-child p {
+    font-size: 0.9375rem;
   }
 }
