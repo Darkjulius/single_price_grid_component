@@ -122,12 +122,13 @@ section > article:first-child > p {
   margin-bottom: 26px;
 }
 
-input {
+button {
   background-color: var(--primary-bright-yellow);
   border: none;
   border-radius: 5px;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   color: #fff;
+  cursor: pointer;
   flex-shrink: 0;
   font-style: normal;
   font-weight: 700;
@@ -137,6 +138,7 @@ input {
 
 section > article:last-child {
   background-color: hsl(179, 62%, 49%);
+
   padding: 24px;
 }
 
