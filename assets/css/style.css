@@ -185,6 +185,7 @@ footer {
   .container > section > article:first-child {
     border-bottom-left-radius: 8px;
     padding: 40px;
+    width: 50%;
   }
 
   .container > section > article:last-child {
