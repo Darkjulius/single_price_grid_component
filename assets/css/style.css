@@ -182,8 +182,13 @@ footer {
     width: 50%;
   }
 
+  .container_one h2 {
+    margin-bottom: 18px;
+  }
+
   .container_one > p {
-    margin-bottom: 20px;
+    font-size: .9375rem;
+    margin-bottom: 26px;
   }
 
   .container_two {
